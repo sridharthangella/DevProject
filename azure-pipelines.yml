@@ -3,8 +3,8 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- master
+trigger: none
+
 
 pool:
   vmImage: ubuntu-latest
@@ -18,4 +18,4 @@ steps:
     resourceGroupName: 'Newtest1RG'
     templateLocation: 'Linked artifact'
     csmFile: 'myapp.bicep'
-    deploymentMode: 'Incremental'
+    deploymentMode: 'Validation'
