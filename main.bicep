@@ -19,6 +19,25 @@ param bastionName string
 
 
 // Run
+
+module serviceBusNamespace './servicebus/createservicebus.bicep' = {
+  name: 'serviceBusNamespaceDeploy'
+  params: {
+    location: location
+    tags: tags
+  }
+
+}
+
+module serviceBusQueue './servicebus/createservicebus.bicep' = {
+  name: 'serviceBusQueueDeploy'
+ 
+}
+
+
+
+
+
 module vnet './vnet/vnet.bicep' = {
   name: 'vnetDeploy'
   params: {
