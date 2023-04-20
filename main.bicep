@@ -17,6 +17,9 @@ param bastionPubIpName string
 
 param bastionName string
 
+param serviceBusNamespaceName string
+param serviceBusQueueName string
+
 
 // Run
 
@@ -24,13 +27,22 @@ module serviceBusNamespace './servicebus/createservicebus.bicep' = {
   name: 'serviceBusNamespaceDeploy'
   params: {
     location: location
+    serviceBusNamespaceName: serviceBusNamespaceName
    // tags: tags
+  
+    serviceBusQueueName: serviceBusQueueName
   }
 
 }
 
 module serviceBusQueue './servicebus/createservicebus.bicep' = {
   name: 'serviceBusQueueDeploy'
+  params: {
+    location: location
+    serviceBusQueueName: serviceBusQueueName
+   // tags: tags
+    serviceBusNamespaceName:serviceBusNamespaceName
+  }
  
 }
 

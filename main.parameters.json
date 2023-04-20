@@ -38,6 +38,13 @@
     },
     "bastionName": {
       "value": "BastionHost"
+    },
+    "serviceBusNamespaceName": {
+      "value": "SridharSBnamespace"
+    },
+    "serviceBusQueueName": {
+      "value": "serviceBusQueueName"
     }
+    
   }
 }
