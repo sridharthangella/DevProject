@@ -11,6 +11,7 @@ pool:
 
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
+  displayName: 'Deploy Bicep file'
   inputs:
     deploymentScope: 'Resource Group'
     subscriptionId: 'c88267eb-7f60-4620-bdac-44c5da10f56e'
