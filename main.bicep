@@ -24,7 +24,7 @@ module serviceBusNamespace './servicebus/createservicebus.bicep' = {
   name: 'serviceBusNamespaceDeploy'
   params: {
     location: location
-    tags: tags
+   // tags: tags
   }
 
 }
